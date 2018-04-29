@@ -9,7 +9,7 @@ class Caster(Resource):
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('value', location='json')
-        parser.add_argument('toType', location='json')
+        parser.add_argument('to-type', location='json')
 
         args = parser.parse_args()
         value = args['value'].encode('utf-8').strip()
